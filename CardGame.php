@@ -25,12 +25,8 @@ class CardGame {
         $cardPlayer1 = $this->player1->playCard();
         $cardPlayer2 = $this->player2->playCard();
 
-        foreach($cardPlayer1 as $cardName=>$cardValue){
-            $cardValuePlayer1 = $cardValue;
-        }
-        foreach($cardPlayer2 as $cardName=>$cardValue){
-            $cardValuePlayer2 = $cardValue;
-        }
+        $cardValuePlayer1 = current($cardPlayer1);
+        $cardValuePlayer2 = current($cardPlayer2);
 
         // Compare cards value
         if($cardValuePlayer1 > $cardValuePlayer2) {

@@ -15,10 +15,6 @@ class CardGame {
         $this->pile->shuffle();
         $this->pileGenerator = $this->pile->generator();
 
-        // Iniate two players
-        $this->player1 = new Player();
-        $this->player2 = new Player();
-
         // Get Starting Hands
         $this->player1->drawStartingHand($this->pileGenerator);
         $this->player2->drawStartingHand($this->pileGenerator);

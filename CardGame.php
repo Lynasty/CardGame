@@ -9,8 +9,8 @@ class CardGame {
     }
 
     public function initGame() {
+        
         // Initiate pile and pileGenerator
-        $this->pile = new Pile();
         $this->pile->build();
         $this->pile->shuffle();
         $this->pileGenerator = $this->pile->generator();
